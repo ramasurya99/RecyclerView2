@@ -16,6 +16,9 @@ import java.util.ArrayList;
 import id.sch.smktelkom_mlg.learn.recyclerview2.R;
 import id.sch.smktelkom_mlg.learn.recyclerview2.model.Hotel;
 
+/**
+ * Created by User on 29/10/2016.
+ */
 public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> {
 
     ArrayList<Hotel> hotelList;
@@ -35,7 +38,6 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, int position) {
         Hotel hotel = hotelList.get(position);
         holder.tvJudul.setText(hotel.judul);
-        holder.tvDeskripsi.setText(hotel.deskripsi);
         holder.ivFoto.setImageDrawable(hotel.foto);
     }
 
@@ -50,13 +52,12 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.ViewHolder> 
 
         ImageView ivFoto;
         TextView tvJudul;
-        TextView tvDeskripsi;
 
         public ViewHolder(View itemView) {
             super(itemView);
             ivFoto = (ImageView) itemView.findViewById(R.id.imageView);
             tvJudul = (TextView) itemView.findViewById(R.id.textViewJudul);
-            tvDeskripsi = (TextView) itemView.findViewById(R.id.textViewDeskripsi);
+
         }
     }
 }
